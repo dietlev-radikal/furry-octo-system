@@ -1,297 +1,356 @@
-
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Demo store</title>
-    <meta name="description" content="">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/13673377a1.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/product-menu.js"></script>
-</head>
-<header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Demo store</title>
+		<meta name="description" content="" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link
+			rel="shortcut icon"
+			href="assets/img/favicon.png"
+			type="image/x-icon"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/13673377a1.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/js/product-menu.js"></script>
+	</head>
 
-<nav class="navbar navbar-expand-lg navbar-light primary-color">
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light primary-color">
+			<div class="container">
+				<a class="navbar-brand" href="#">Radikal demo</a>
 
-  <div class="container">
+				<!-- Collapse button -->
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#basicExampleNav"
+					aria-controls="basicExampleNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-  <a class="navbar-brand" href="#">Radikal demo</a>
+				<div class="collapse navbar-collapse" id="basicExampleNav">
+					<!-- Links -->
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Shop</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sale</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header class="header">
+			<div class="container">
+				<div class="col-8">
+					<h1>Lorem impsum title</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+						elementum dictum nisl et consectetur. Duis ante nulla, euismod in
+						est eget, euismod ornare neque. Nam nec ipsum et nulla laoreet
+						tristique in non quam. Pellentesque laoreet
+						<a href="#">tellus at enim</a> iaculis, sit amet pulvinar sapien
+						ultrices. Duis facilisis laoreet magna at congue.
+					</p>
+				</div>
+			</div>
+		</header>
+		<section class="products">
+			<div class="container">
+				<div class="row">
+					<h2>Our products</h2>
+					<ul class="category-list">
+						<li>
+							<a href="#" class="link--item category-accessory"
+								><img
+									src="assets/icons/watch.svg"
+									alt="Accessory"
+								/>Accessory</a
+							>
+						</li>
+						<li>
+							<a href="#" class="link--item category-womenshirt"
+								><img
+									src="assets/icons/Women-Shirt.svg"
+									alt="Girls t-shirt"
+								/>Girls t-shirt</a
+							>
+						</li>
+						<li>
+							<a href="#" class="link--item category-pants"
+								><img src="assets/icons/Pants.svg" alt="Pants" />Pants</a
+							>
+						</li>
+						<li>
+							<a href="#" class="link--item category-backpack"
+								><img
+									src="assets/icons/Backpack.svg"
+									alt="Backpacks"
+								/>Backpacks</a
+							>
+						</li>
+						<li>
+							<a href="#" class="link--item category-shoes"
+								><img src="assets/icons/Shoes.svg" alt="Shoes" />Shoes</a
+							>
+						</li>
+						<li>
+							<a href="#" class="link--item category-hats"
+								><img src="assets/icons/Women Hat.svg" alt="Hats" />Hat</a
+							>
+						</li>
+						<li>
+							<a href="#" class="link--item category-skirts"
+								><img src="assets/icons/Skirt.svg" alt="Skirts" />Skirts</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="row all-products">
+					<div class="col-3 category-accessory primary-category">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/wallet-4977019_1920.jpg" />
+						<div class="product-content">
+							<h3>Leather wallet</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 20</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-accessory primary-category">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/bracelet-5982564_1280.jpg" />
+						<div class="product-content">
+							<h3>Men's bracelet</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 15</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-accessory primary-category">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/brogue-shoes-5994356_1920.jpg" />
+						<div class="product-content">
+							<h3>Brogue shoes</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 120</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-accessory primary-category">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/glasses-5995928_1920.jpg" />
+						<div class="product-content">
+							<h3>Glasses</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 30</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-accessory primary-category">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/handbag-1051994_1920.jpg" />
+						<div class="product-content">
+							<h3>Womens handbag</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 99</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-accessory primary-category">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/rings-5448090_1920.jpg" />
+						<div class="product-content">
+							<h3>Silver rings</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 40</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-accessory primary-category">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/rings-5459099_1920.jpg" />
+						<div class="product-content">
+							<h3>Diamond ring</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 499</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-accessory primary-category">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/watch-5063956_1920.jpg" />
+						<div class="product-content">
+							<h3>Silver watch</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 249</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-womenshirt">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/fashion-2766725_1280.jpg" />
+						<div class="product-content">
+							<h3>Women shirt</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 35</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-pants">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/girl-2200984_1280.jpg" />
+						<div class="product-content">
+							<h3>Blue jeans</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 79</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-backpack">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/nature-2569172_1280.jpg" />
+						<div class="product-content">
+							<h3>Grey backpack</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 45</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-shoes">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/shoes-4195062_1280.jpg" />
+						<div class="product-content">
+							<h3>Black shoes</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 119</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-hats">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/portrait-3578054_1280.jpg" />
+						<div class="product-content">
+							<h3>Women hat</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 49</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-3 category-skirts">
+						<a href="https://www.radikal.io/" class="product-wrapper"></a>
+						<img src="assets/img/mannequin-3616355_1280.jpg" />
+						<div class="product-content">
+							<h3>Black skirt</h3>
+							<i class="far fa-heart"></i>
+							<div>
+								<span class="price">€ 59</span>
+								<a class="buy-btn" href="#">Buy now</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
-  <!-- Collapse button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+				<div class="row">
+					<div class="products-bottom">
+						<ul class="pagination">
+							<li class="page-item active-link">
+								<a class="page-link" href="#">1</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+						</ul>
 
-  <div class="collapse navbar-collapse" id="basicExampleNav">
-
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Shop</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sale</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-
-    </ul>
-
-  </div>
-
-</div>
-
-</nav>
-
-
-</header>   
-<body>
-<section class="header">
-    <div class="container">
-        <div class="col-8">
-        <h1>Lorem impsum title</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum dictum nisl et consectetur. Duis ante nulla, euismod in est eget, euismod ornare neque. Nam nec ipsum et nulla laoreet tristique in non quam. Pellentesque laoreet <a>tellus at enim</a> iaculis, sit amet pulvinar sapien ultrices. Duis facilisis laoreet magna at congue.</p>
-        </div>
-    </div>
-</section>
-<section class="products">
-<div class="container">
-  <div class="row">
-    <h2>Our products</h2>
-      <ul class="category-list">
-    <li><a href="#" class="link--item category-accessory"><img src="assets/icons/watch.svg" alt="Accessory">Accessory</a></li>
-    <li><a href="#" class="link--item category-womenshirt"><img src="assets/icons/Women-Shirt.svg" alt="Girls t-shirt">Girls t-shirt</a></li>
-    <li><a href="#" class="link--item category-pants"><img src="assets/icons/Pants.svg" alt="Pants">Pants</a></li>
-    <li><a href="#" class="link--item category-backpack"><img src="assets/icons/Backpack.svg" alt="Backpacks">Backpacks</a></li>
-    <li><a href="#" class="link--item category-shoes"><img src="assets/icons/Shoes.svg" alt="Shoes">Shoes</a></li>
-    <li><a href="#" class="link--item category-hats"><img src="assets/icons/Women Hat.svg" alt="Hats">Hat</a></li>
-    <li><a href="#" class="link--item category-skirts"><img src="assets/icons/Skirt.svg" alt="Skirts">Skirts</a></li>
-  </ul>
-  </div>
-  <div class="row all-products">
-    <div class="col-3 category-accessory primary-category">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/wallet-4977019_1920.jpg">
-      <div class="product-content">
-      <h3>Leather wallet</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 20</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-
-    </div>
-    <div class="col-3 category-accessory primary-category">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/bracelet-5982564_1280.jpg">
-      <div class="product-content">
-      <h3>Men's bracelet</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 15</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-    <div class="col-3 category-accessory primary-category">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/brogue-shoes-5994356_1920.jpg">
-      <div class="product-content">
-      <h3>Brogue shoes</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 120</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-    <div class="col-3 category-accessory primary-category">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/glasses-5995928_1920.jpg">
-      <div class="product-content">
-      <h3>Glasses</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 30</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-        <div class="col-3 category-accessory primary-category">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/handbag-1051994_1920.jpg">
-      <div class="product-content">
-      <h3>Womens handbag</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 99</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-        <div class="col-3 category-accessory primary-category">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/rings-5448090_1920.jpg">
-      <div class="product-content">
-      <h3>Silver rings</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 40</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-        <div class="col-3 category-accessory primary-category">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/rings-5459099_1920.jpg">
-      <div class="product-content">
-      <h3>Diamond ring</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 499</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-    <div class="col-3 category-accessory primary-category">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/watch-5063956_1920.jpg">
-      <div class="product-content">
-      <h3>Silver watch</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 249</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-    <div class="col-3 category-womenshirt">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/fashion-2766725_1280.jpg">
-      <div class="product-content">
-      <h3>Women shirt</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 35</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-    <div class="col-3 category-pants">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/girl-2200984_1280.jpg">
-      <div class="product-content">
-      <h3>Blue jeans</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 79</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-    <div class="col-3 category-backpack">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/nature-2569172_1280.jpg">
-      <div class="product-content">
-      <h3>Grey backpack</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 45</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-    <div class="col-3 category-shoes">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/shoes-4195062_1280.jpg">
-      <div class="product-content">
-      <h3>Black shoes</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 119</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-    <div class="col-3 category-hats">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/portrait-3578054_1280.jpg">
-      <div class="product-content">
-      <h3>Women hat</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 49</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-    <div class="col-3 category-skirts">
-    <a href="https://www.radikal.io/" class="product-wrapper"></a>
-      <img src="assets/img/mannequin-3616355_1280.jpg">
-      <div class="product-content">
-      <h3>Black skirt</h3>
-      <i class="far fa-heart"></i>
-      <div>
-        <span class="price">€ 59</span>
-        <a class="buy-btn" href="#">Buy now</a>
-      </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="row">
-    
-    <div class="products-bottom">
-      
-      <ul class="pagination">
-        <li class="page-item active-link"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-      </ul>
-
-    <a class="sweep-btn" href="#">View all products</a>
-
-    </div>
-
-  </div>
-</div>
-</section>
-</body>
-<footer>
-    <div class="container">
-        <div class="col">
-          <h4>Address</h4>
-          <p>Stationsstraat 58<br>
-          0000 Lorem<br>
-          </p>
-        </div>
-        <div class="col contact">
-          <h4>Contactdetails</h4>
-          <p><a href="tel:04123456789">04123456789</a><br>
-          <a href="mailto:info@loremipsum.be">info@loremipsum.be</a>
-          </p>
-        </div>
-        <div class="col socials">
-          <h4>Socials</h4>
-          <p><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-          </p>
-        </div>
-    </div>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-</footer>
+						<a class="sweep-btn" href="#">View all products</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="fixed-bottom">
+			<div class="container">
+				<div class="col">
+					<h4>Address</h4>
+					<p>
+						Stationsstraat 58<br />
+						0000 Lorem<br />
+					</p>
+				</div>
+				<div class="col contact">
+					<h4>Contactdetails</h4>
+					<p>
+						<a href="tel:04123456789">04123456789</a><br />
+						<a href="mailto:info@loremipsum.be">info@loremipsum.be</a>
+					</p>
+				</div>
+				<div class="col socials">
+					<h4>Socials</h4>
+					<p>
+						<a href="https://www.facebook.com/" target="_blank"
+							><i class="fab fa-facebook-square"></i></a
+						><a href="https://www.linkedin.com/" target="_blank"
+							><i class="fab fa-instagram"></i
+						></a>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>

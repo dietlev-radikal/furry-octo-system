@@ -3,6 +3,8 @@
     // fetch the class of the clicked item
     const ourClass = $(event.target).attr('class');
 
+    console.log(ourClass);
+
     // reset the active class on all the buttons
     jQuery('.category-list li').removeClass('active');
     // update the active state on our clicked button
