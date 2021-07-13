@@ -153,6 +153,10 @@ body .header a:hover:before {
 	pointer-events: none;
 }
 
+.products {
+	margin-bottom: 218px;
+}
+
 .products .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -284,6 +288,10 @@ body .header a:hover:before {
 
 .page-item .page-link {
 	color: black !important;
+}
+
+.page-item .page-link:hover {
+	color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .page-link.active-link {

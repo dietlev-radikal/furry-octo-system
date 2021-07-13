@@ -1,5 +1,5 @@
 jQuery(document).ready(function () {
-	let currentPage = '1';
+	let currentPage = 1;
 	const productPageSize = '8';
 	let productCount = jQuery('.all-products').children('div').length;
 	let totalPages = Math.ceil(productCount / productPageSize);
@@ -35,7 +35,9 @@ jQuery(document).ready(function () {
 			jQuery('.all-products').children('div.primary-category').show();
 		} else if (ourClass == 'none') {
 			jQuery('.all-products').children('div').show();
-			jQuery('.all-products').children('div:nth-child(n + 9)').hide();
+			if (!jQuery('.products-bottom .sweep-btn').hasClass('active')) {
+				jQuery('.all-products').children('div:nth-child(n + 9)').hide();
+			}
 			productCount = jQuery('.all-products').children('div').length;
 			totalPages = Math.ceil(productCount / productPageSize);
 		} else {
@@ -52,21 +54,21 @@ jQuery(document).ready(function () {
 			totalPages = Math.ceil(productCount / productPageSize);
 		}
 
-		console.log(productCount, totalPages, productCount / productPageSize);
+		if (!jQuery('.products-bottom .sweep-btn').hasClass('active')) {
+			jQuery('.pagination').empty();
 
-		jQuery('.pagination').empty();
+			for (let index = 1; index <= totalPages; index++) {
+				jQuery('.pagination').append(
+					`<li class="page-item"><a class="page-link" href="#">${index}</a></li>`
+				);
+			}
 
-		for (let index = 1; index <= totalPages; index++) {
-			jQuery('.pagination').append(
-				`<li class="page-item"><a class="page-link" href="#">${index}</a></li>`
-			);
+			jQuery('.pagination')
+				.children('li')
+				.first()
+				.children('a')
+				.addClass('active-link');
 		}
-
-		jQuery('.pagination')
-			.children('li')
-			.first()
-			.children('a')
-			.addClass('active-link');
 
 		return false;
 	});
@@ -76,16 +78,46 @@ jQuery(document).ready(function () {
 		jQuery('.category-list li').removeClass('active');
 		if (jQuery(event.target).hasClass('active')) {
 			jQuery('.all-products').children('div').show();
+			jQuery('.pagination').empty();
 		} else {
+			productCount = jQuery('.all-products').children('div:visible').length;
+			totalPages = Math.ceil(productCount / productPageSize);
 			jQuery('.all-products').children('div:nth-child(n + 9)').hide();
+
+			for (let index = 1; index <= totalPages; index++) {
+				jQuery('.pagination').append(
+					`<li class="page-item"><a class="page-link" href="#">${index}</a></li>`
+				);
+			}
+
+			jQuery('.pagination')
+				.children('li')
+				.first()
+				.children('a')
+				.addClass('active-link');
 		}
 	});
 
-	jQuery('.products-bottom .pagination li a').click(function (event) {
-		jQuery('.products-bottom .pagination li a').removeClass('active-link');
-		jQuery(event.target).addClass('active-link');
-		currentPage = jQuery(event.target).text();
-	});
+	jQuery(document).on(
+		'click',
+		'.products-bottom .pagination .page-link',
+		function (event) {
+			jQuery('.products-bottom .pagination .page-link').removeClass(
+				'active-link'
+			);
+			jQuery(event.target).addClass('active-link');
+			currentPage = parseInt(jQuery(event.target).text(), 10);
+			currentPage = currentPage - 1;
+			jQuery('.all-products').children('div').hide();
+			jQuery('.all-products')
+				.children(
+					`div:nth-child(n + ${
+						productPageSize * currentPage + 1
+					}):nth-child(-n + ${productPageSize * (currentPage + 1)})`
+				)
+				.show();
+		}
+	);
 });
 
 $(function () {
