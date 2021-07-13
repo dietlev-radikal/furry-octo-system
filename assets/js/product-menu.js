@@ -1,18 +1,24 @@
 jQuery(document).ready(function () {
 	jQuery('.category-list li a').click(function (event) {
 		// fetch the class of the clicked item
-		const ourClass = $(event.target).attr('class');
+		let ourClass = $(event.target).attr('class');
 
-		console.log(ourClass);
-
-		// reset the active class on all the buttons
-		jQuery('.category-list li').removeClass('active');
-		// update the active state on our clicked button
-		jQuery(this).parent().addClass('active');
+		if (jQuery('.category-list li').hasClass('active')) {
+			jQuery('.category-list li').removeClass('active');
+			ourClass = 'none';
+		} else {
+			// reset the active class on all the buttons
+			jQuery('.category-list li').removeClass('active');
+			// update the active state on our clicked button
+			jQuery(this).parent().addClass('active');
+		}
 
 		if (ourClass == 'primary-category') {
 			// show all our items
 			jQuery('.all-products').children('div.primary-category').show();
+		} else if (ourClass == 'none') {
+			jQuery('.all-products').children('div').show();
+			jQuery('.all-products').children('div:nth-child(n + 9)').hide();
 		} else {
 			// hide all elements that don't share ourClass
 			jQuery('.all-products')
@@ -24,6 +30,16 @@ jQuery(document).ready(function () {
 				.show();
 		}
 		return false;
+	});
+
+	jQuery('.products-bottom .sweep-btn').click(function (event) {
+		jQuery(event.target).toggleClass('active');
+		jQuery('.category-list li').removeClass('active');
+		if (jQuery(event.target).hasClass('active')) {
+			jQuery('.all-products').children('div').show();
+		} else {
+			jQuery('.all-products').children('div:nth-child(n + 9)').hide();
+		}
 	});
 });
 
