@@ -283,12 +283,11 @@ body .header a:hover:before {
 }
 
 .page-item .page-link {
-	color: black;
+	color: black !important;
 }
 
-.page-item.active-link {
+.page-link.active-link {
 	font-size: 30px !important;
-	color: #104478 !important;
 }
 
 .page-link,
@@ -368,7 +367,6 @@ footer .contact a:before {
 	left: 0;
 	background: white;
 	transition: 200ms;
-	z-index: -1;
 }
 
 footer .contact a:hover:before {

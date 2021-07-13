@@ -1,9 +1,26 @@
 jQuery(document).ready(function () {
+	let currentPage = '1';
+	const productPageSize = '8';
+	let productCount = jQuery('.all-products').children('div').length;
+	let totalPages = Math.ceil(productCount / productPageSize);
+
+	for (let index = 1; index <= totalPages; index++) {
+		jQuery('.pagination').append(
+			`<li class="page-item"><a class="page-link" href="#">${index}</a></li>`
+		);
+	}
+
+	jQuery('.pagination')
+		.children('li')
+		.first()
+		.children('a')
+		.addClass('active-link');
+
 	jQuery('.category-list li a').click(function (event) {
 		// fetch the class of the clicked item
 		let ourClass = $(event.target).attr('class');
 
-		if (jQuery('.category-list li').hasClass('active')) {
+		if (jQuery(event.target).parent().hasClass('active')) {
 			jQuery('.category-list li').removeClass('active');
 			ourClass = 'none';
 		} else {
@@ -19,6 +36,8 @@ jQuery(document).ready(function () {
 		} else if (ourClass == 'none') {
 			jQuery('.all-products').children('div').show();
 			jQuery('.all-products').children('div:nth-child(n + 9)').hide();
+			productCount = jQuery('.all-products').children('div').length;
+			totalPages = Math.ceil(productCount / productPageSize);
 		} else {
 			// hide all elements that don't share ourClass
 			jQuery('.all-products')
@@ -28,7 +47,27 @@ jQuery(document).ready(function () {
 			jQuery('.all-products')
 				.children('div.' + ourClass)
 				.show();
+
+			productCount = jQuery('.all-products').children('div:visible').length;
+			totalPages = Math.ceil(productCount / productPageSize);
 		}
+
+		console.log(productCount, totalPages, productCount / productPageSize);
+
+		jQuery('.pagination').empty();
+
+		for (let index = 1; index <= totalPages; index++) {
+			jQuery('.pagination').append(
+				`<li class="page-item"><a class="page-link" href="#">${index}</a></li>`
+			);
+		}
+
+		jQuery('.pagination')
+			.children('li')
+			.first()
+			.children('a')
+			.addClass('active-link');
+
 		return false;
 	});
 
@@ -40,6 +79,12 @@ jQuery(document).ready(function () {
 		} else {
 			jQuery('.all-products').children('div:nth-child(n + 9)').hide();
 		}
+	});
+
+	jQuery('.products-bottom .pagination li a').click(function (event) {
+		jQuery('.products-bottom .pagination li a').removeClass('active-link');
+		jQuery(event.target).addClass('active-link');
+		currentPage = jQuery(event.target).text();
 	});
 });
 
